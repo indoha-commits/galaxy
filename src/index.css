@@ -1,0 +1,153 @@
+@import "@fontsource/playfair-display/400.css";
+@import "@fontsource/playfair-display/500.css";
+@import "@fontsource/playfair-display/600.css";
+@import "@fontsource/playfair-display/700.css";
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Galaxy Logistics Design System
+   Enhanced with gradients, better contrasts, and visual depth
+   All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Galaxy Logistics Color Palette */
+    --navy: 210 64% 12%;           /* #0B1F33 */
+    --deep-blue: 209 67% 22%;      /* #123A5E */
+    --accent-blue: 212 47% 44%;    /* #3A6EA5 */
+    --light-bg: 214 33% 97%;       /* #F5F7FA */
+    --dark-text: 0 0% 10%;         /* #1A1A1A */
+    
+    /* Enhanced highlight colors */
+    --gold: 43 74% 49%;            /* Gold accent */
+    --silver: 210 14% 83%;         /* Silver/light text */
+
+    /* Dark theme by default */
+    --background: 210 64% 12%;
+    --foreground: 210 14% 93%;     /* Brighter foreground */
+
+    --card: 209 67% 18%;
+    --card-foreground: 210 14% 93%;
+
+    --popover: 209 67% 22%;
+    --popover-foreground: 210 14% 93%;
+
+    --primary: 212 47% 44%;
+    --primary-foreground: 210 14% 97%;
+
+    --secondary: 209 67% 22%;
+    --secondary-foreground: 210 14% 93%;
+
+    --muted: 209 50% 18%;
+    --muted-foreground: 210 14% 75%;  /* Brighter muted text */
+
+    --accent: 212 47% 44%;
+    --accent-foreground: 210 14% 97%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 209 40% 30%;
+    --input: 209 40% 25%;
+    --ring: 212 47% 44%;
+
+    --radius: 0.25rem;
+
+    /* Navbar specific */
+    --navbar-bg: 210 64% 12%;
+    --navbar-bg-scrolled: 210 64% 8%;
+    
+    /* Gradient tokens */
+    --gradient-hero: linear-gradient(135deg, hsl(210 64% 8%) 0%, hsl(209 67% 18%) 50%, hsl(210 64% 12%) 100%);
+    --gradient-section: linear-gradient(180deg, hsl(209 67% 22%) 0%, hsl(210 64% 12%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(209 67% 24% / 0.8) 0%, hsl(209 67% 18% / 0.6) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(212 47% 44%) 0%, hsl(212 60% 55%) 100%);
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading text-foreground;
+  }
+}
+
+@layer components {
+  /* Subtle text reveal animation */
+  .reveal-text {
+    @apply opacity-0 translate-y-4 transition-all duration-700 ease-out;
+  }
+
+  .reveal-text.visible {
+    @apply opacity-100 translate-y-0;
+  }
+
+  /* Subtle hover effect for nav links */
+  .nav-link {
+    @apply relative text-silver transition-colors duration-300 hover:text-foreground;
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-px bg-accent transition-all duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  /* Section styling */
+  .section-container {
+    @apply max-w-6xl mx-auto px-6 lg:px-8;
+  }
+
+  /* Gradient backgrounds */
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .bg-gradient-section {
+    background: var(--gradient-section);
+  }
+
+  .bg-gradient-card {
+    background: var(--gradient-card);
+  }
+
+  /* Glass card effect */
+  .glass-card {
+    @apply backdrop-blur-sm border border-border/40;
+    background: linear-gradient(145deg, hsl(var(--card) / 0.7) 0%, hsl(var(--card) / 0.4) 100%);
+  }
+
+  /* Overlay gradient for images */
+  .image-overlay {
+    background: linear-gradient(180deg, hsl(var(--navy) / 0.3) 0%, hsl(var(--navy) / 0.8) 100%);
+  }
+
+  /* Enhanced text shadows for readability on images */
+  .text-shadow {
+    text-shadow: 0 2px 20px hsl(var(--navy) / 0.8);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
