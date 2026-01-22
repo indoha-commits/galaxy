@@ -75,7 +75,7 @@ export function Navbar() {
               className="border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-colors"
             >
               <a
-                href="https://quartz-mug-31247526.figma.site"
+                href={(import.meta.env.VITE_AUTH_PORTAL_URL as string | undefined) ?? 'https://cargo-auth.pages.dev/'}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -120,7 +120,7 @@ export function Navbar() {
                   className="border-accent text-accent hover:bg-accent hover:text-accent-foreground"
                 >
                   <a
-                    href="https://quartz-mug-31247526.figma.site"
+                    href={(import.meta.env.VITE_AUTH_PORTAL_URL as string | undefined) ?? 'https://cargo-auth.pages.dev/'}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
