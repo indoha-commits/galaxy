@@ -9,9 +9,13 @@ export function Footer() {
           
           {/* Company Info - Takes more space */}
           <div className="lg:col-span-5">
-            <h3 className="font-heading text-2xl font-semibold text-foreground mb-4">
-              Galaxy Logistics
-            </h3>
+            <div className="mb-4">
+              <img
+                src="/galaxy-logistics-logo.png"
+                alt="Galaxy Logistics"
+                className="h-[72px] w-auto"
+              />
+            </div>
             <p className="text-silver text-sm leading-relaxed mb-6 max-w-sm">
               Professional customs clearance and logistics coordination services. 
               We help businesses navigate import/export processes with reliable, 
@@ -65,14 +69,14 @@ export function Footer() {
                 About Us
               </Link>
               <a
-                href="https://galaxylogistics.com"
+                href={(import.meta.env.VITE_AUTH_PORTAL_URL as string | undefined) ?? 'https://cargo-auth.pages.dev/'}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm text-silver hover:text-foreground transition-colors inline-flex items-center gap-1"
               >
-                Client Portal
-                <ExternalLink size={12} />
-              </a>
+               Client Portal
+               <ExternalLink size={12} />
+             </a>
             </nav>
           </div>
 
@@ -83,22 +87,22 @@ export function Footer() {
             </h4>
             <div className="flex flex-col space-y-4">
               <a
-                href="tel:+250780000000"
+                href="tel:+250795619627"
                 className="flex items-center gap-3 text-sm text-silver hover:text-foreground transition-colors group"
               >
                 <div className="w-9 h-9 flex items-center justify-center bg-accent/20 rounded group-hover:bg-accent/30 transition-colors">
                   <Phone size={16} className="text-accent" />
                 </div>
-                <span>+250 780 000 000</span>
+                <span>+250 795619627</span>
               </a>
               <a
-                href="mailto:info@galaxylogistics.com"
+                href="mailto:galaxyagencyltd@gmail.com"
                 className="flex items-center gap-3 text-sm text-silver hover:text-foreground transition-colors group"
               >
                 <div className="w-9 h-9 flex items-center justify-center bg-accent/20 rounded group-hover:bg-accent/30 transition-colors">
                   <Mail size={16} className="text-accent" />
                 </div>
-                <span>info@galaxylogistics.com</span>
+                <span>galaxyagencyltd@gmail.com</span>
               </a>
               <a
                 href="https://wa.me/250780000000"

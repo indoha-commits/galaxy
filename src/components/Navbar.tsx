@@ -38,12 +38,14 @@ export function Navbar() {
       }`}
     >
       <div className="section-container">
-        <div className="flex items-center justify-between h-16 lg:h-20">
+        <div className="flex items-center justify-between h-20 lg:h-24">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <span className="font-heading text-xl lg:text-2xl font-semibold text-foreground">
-              Galaxy Logistics
-            </span>
+          <Link to="/" className="flex items-center space-x-2" aria-label="Galaxy Logistics">
+            <img
+              src="/galaxy-logistics-logo.png"
+              alt="Galaxy Logistics"
+              className="h-[56px] lg:h-[72px] w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -65,9 +67,6 @@ export function Navbar() {
 
           {/* Right Side */}
           <div className="hidden lg:flex items-center space-x-6">
-            <span className="text-sm text-muted-foreground tracking-wide">
-              Rwanda
-            </span>
             <Button
               asChild
               variant="outline"
@@ -112,7 +111,6 @@ export function Navbar() {
                 </Link>
               ))}
               <div className="pt-4 border-t border-border/30 flex items-center justify-between">
-                <span className="text-sm text-muted-foreground">Rwanda</span>
                 <Button
                   asChild
                   variant="outline"

@@ -238,7 +238,7 @@ const Home = () => {
                 size="lg"
                 className="border-silver/30 text-silver hover:bg-silver/10 hover:text-foreground px-8"
               >
-                <a href="mailto:info@galaxylogistics.com">
+                <a href="mailto:galaxyagencyltd@gmail.com">
                   Email Us
                 </a>
               </Button>
