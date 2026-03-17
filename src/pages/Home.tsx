@@ -39,7 +39,7 @@ const Home = () => {
                 className="bg-accent hover:bg-accent/90 text-accent-foreground px-8"
               >
                 <a
-                  href={(import.meta.env.VITE_AUTH_PORTAL_URL as string | undefined) ?? 'https://cargo-auth.pages.dev/'}
+                  href={(import.meta.env.VITE_AUTH_PORTAL_URL as string | undefined) ?? 'https://indataflow.com/login'}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -225,7 +225,7 @@ const Home = () => {
                 className="bg-accent hover:bg-accent/90 text-accent-foreground px-8"
               >
                 <a
-                  href={(import.meta.env.VITE_AUTH_PORTAL_URL as string | undefined) ?? 'https://cargo-auth.pages.dev/'}
+                  href={(import.meta.env.VITE_AUTH_PORTAL_URL as string | undefined) ?? 'https://indataflow.com/login'}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
